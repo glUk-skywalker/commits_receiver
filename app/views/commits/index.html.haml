@@ -1,0 +1,8 @@
+=link_to "Back", root_path
+#paginated_list
+  = render 'list'
+
+= form_tag commits_mass_removal_path, remote: true do
+  /list of commits ids, which will be deleted
+  = hidden_field_tag :ids_list
+  = submit_tag "Delete selected"

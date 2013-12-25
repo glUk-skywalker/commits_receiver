@@ -1,0 +1,11 @@
+-if @commits.empty?
+  = "No such page, or commits at all"
+  
+%ul
+  - @commits.each do |commit|
+    %li{ db_id: commit.id }
+      = commit.sha
+      %input.mark_to_delete{ type: "checkbox" }
+
+= will_paginate @commits
+= "total: #{@commits_total} commits"
