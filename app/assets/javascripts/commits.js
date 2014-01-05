@@ -5,7 +5,7 @@ $("document").ready(function() {
         if (res != "") {
             res = res + ";"
         };
-        res = res + $(this).parent().attr("db_id");
+        res = res + $(this).parent().parent().attr("db_id");
     });
 
     $("#ids_list").attr("value", res);
@@ -18,7 +18,7 @@ $(document).on("click", ".mark_to_delete", function() {
         if (res != "") {
             res = res + ";"
         };
-        res = res + $(this).parent().attr("db_id");
+        res = res + $(this).parent().parent().attr("db_id");
     });
 
     $("#ids_list").attr("value", res);
