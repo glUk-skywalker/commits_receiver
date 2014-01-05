@@ -4,8 +4,6 @@ class ReceiverController < ApplicationController
   end
 
   def receive
-    
-    
     github = Github.new basic_auth: creds_line
 
     commits = github.repos.commits.all(params[:owner], params[:repo])
